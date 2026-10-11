@@ -1,7 +1,7 @@
 function Header(){
     return(
         <>
-        <h1>Name : Oza Parth , ID : 24CS055</h1>
+        <h1>Name : Jay Ladva , ID : 24CS045</h1>
         </>
     );
 }

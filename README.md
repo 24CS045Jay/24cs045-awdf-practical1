@@ -1,16 +1,47 @@
-# React + Vite
+# Practical 2: State Management and Routing in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Student Details:**
+- **Name:** Jay Ladva
+- **Student ID:** 24CS045
+- **Email:** 24cs045@charusat.edu.in
+- **Course:** ITUE301: Advance Web Development Framework
+- **Institute:** CSPIT, Charotar University of Science and Technology (CHARUSAT)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Overview
+This project extends the student portfolio application from Practical 1 by introducing client-side multi-page routing via **React Router v6** and reactive state management using the **`useState`** hook.
 
-## React Compiler
+## 🚀 Implemented Features & Routes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Navigation & Routing (React Router v6)
+- **`<BrowserRouter>`**: Wraps the application in `src/main.jsx`.
+- **`<NavBar />`**: Navigation bar with client-side `<NavLink>` links (no page reloads):
+  - `/` → **Home (`<Home />`)**: Personal introduction, department, and technical skills.
+  - `/projects` → **Projects (`<Projects />`)**: Showcase of student projects with dynamic state filtering.
+  - `/contact` → **Contact (`<Contact />`)**: Real-time controlled form and interactive feedback.
+  - `*` → **404 Not Found (`<NotFound />`)**: Fallback error route with easy navigation back to Home.
 
-## Expanding the Oxlint configuration
+### 2. Reactive State Management (`useState`)
+- **Controlled Contact Input**: Captures user input and synchronizes state in real time via `onChange`.
+- **Live Character Counter**: Computes and displays the length of the message in real time.
+- **UI Visibility Toggle**: Toggles help tips and FAQs on the contact page.
+- **Dark/Light Mode Theme Toggle**: Managed at the application root level with CSS theme classes (`.dark-theme` / `.light-theme`).
+- **Category Filter State**: Filter projects on the Projects page by category (`All`, `React`, `Frontend`, `FullStack`).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠️ Setup & Running Locally
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Run development server:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Build production bundle:**
+   ```bash
+   npm run build
+   ```
